@@ -1,0 +1,30 @@
+.language_switch_container {
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  display: flex;
+  border: none;
+  background-color: transparent;
+}
+  
+.language_switch_handle {
+  color: var(--language--switch);
+  font-weight: 900;
+  padding: 5px;
+  transition: .15s;
+  font-size: 25px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .language_switch_handle:hover {
+    color: var(--accent-color)
+  }
+}
+
+@media (hover: none) {
+  .language_switch_handle {
+    color: var(--accent-color);
+  }
+}

@@ -1,0 +1,22 @@
+.theme_switch_container {
+  width: 75px;
+  height: 40px;
+  background-color: var(--switch-bg-color);
+  border-radius: 50px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  display: flex;
+  border: none;
+  padding: 5px;
+}
+  
+.theme_switch_handle {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  background-color: var(--accent-color);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

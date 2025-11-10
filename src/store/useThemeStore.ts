@@ -57,7 +57,7 @@ const useThemeStore = create<ThemeStore>((set, get) => ({
       set({ isAnimating: true });
 
       let color_assets: ColorGradients = colorGradients.theme_light_to_dark;
-      let values_count: number = Math.floor(data.animation.theme.change / data.animation.theme.step);
+      let values_count: number = Math.floor(data.animation.theme.change / data.animation.theme.step) + 1;
       let iterations: number = theme === "dark" ? 0 : -1;
       let main_order: boolean = theme === "dark";
       do {

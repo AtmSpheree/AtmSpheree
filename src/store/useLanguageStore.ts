@@ -50,7 +50,7 @@ const useLanguageStore = create<LanguageStore>((set, get) => ({
       ([key]) => key.startsWith("--text") && key !== "--switch-bg-color"
     ));
     let color_assets: ColorGradients = useThemeStore.getState().theme === "dark" ? colorGradients.language_dark : colorGradients.language_light;
-    let values_count: number = Math.floor(data.animation.language.change / data.animation.language.step);
+    let values_count: number = Math.floor(data.animation.language.change / data.animation.language.step) + 1;
     let iterations: number = 0;
     do {
       for (const [key] of Object.entries(colors)) {

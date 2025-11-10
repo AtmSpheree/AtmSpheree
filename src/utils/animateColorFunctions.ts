@@ -20,7 +20,7 @@ function makeGradient(color_1: string, color_2: string, time: number, time_step:
   let color_step: ArrayRGBA = color_1_rgba.map((value: number, index_value: number): number => {
     return Math.abs(color_2_rgba[index_value] - value) / iterations;
   }) as ArrayRGBA;
-  for (let index: number = 1; index < (iterations + 1); index++) {
+  for (let index: number = 0; index < (iterations + 1); index++) {
     result.push(color_1_rgba.map((value: number, index_value: number): number => {
       return index_value === 3 ?
         (value - color_2_rgba[index_value] <= 0 ?
@@ -28,8 +28,8 @@ function makeGradient(color_1: string, color_2: string, time: number, time_step:
         : 
           Math.round((value - (color_step[index_value] * index)) * 10) / 10)
       :
-        (value - color_2_rgba[index_value] <= 0 ?
-          Math.round(value + (color_step[index_value] * index))
+        (value - color_2_rgba[index_value] < 0 ?
+          Math.round(value + (color_step[index_value] * (index + 1)))
         : 
           Math.round(value - (color_step[index_value] * index)));
     }) as ArrayRGBA);

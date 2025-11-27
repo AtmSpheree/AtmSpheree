@@ -262,12 +262,12 @@ function Projects() {
                 }`}
                 onClick={() => toggleDropdown("sort")}
               >
+                <span className={styles.filterValue}>
+                  {sortOrder === "desc"
+                    ? locale.projects.filters.sortNewFirst
+                    : locale.projects.filters.sortOldFirst}
+                </span>
                 <div className={styles.filterState}>
-                  <span className={styles.filterValue}>
-                    {sortOrder === "desc"
-                      ? locale.projects.filters.sortNewFirst
-                      : locale.projects.filters.sortOldFirst}
-                  </span>
                   <FiChevronDown />
                 </div>
               </button>

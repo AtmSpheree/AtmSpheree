@@ -68,7 +68,9 @@
       ]
     },
     "projectsCard": {
-      "subtitle": "Projects"
+      "subtitle": "Projects",
+      "title": "Latest projects",
+      "moreButton": "More..."
     }
   },
   "projects": {

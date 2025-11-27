@@ -190,7 +190,7 @@
 .searchWrapper {
   flex: 1;
   width: 100%;
-  max-width: 700px;
+  max-width: 750px;
   display: flex;
   align-items: center;
   gap: 0.5rem;

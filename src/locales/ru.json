@@ -68,7 +68,9 @@
       ]
     },
     "projectsCard": {
-      "subtitle": "Проекты"
+      "subtitle": "Проекты",
+      "title": "Последние проекты",
+      "moreButton": "Ещё..."
     }
   },
   "projects": {

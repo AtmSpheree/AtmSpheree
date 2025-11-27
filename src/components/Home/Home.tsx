@@ -3,6 +3,8 @@ import useLanguageStore, { type Locale } from "../../store/useLanguageStore";
 import styles from "./Home.module.css";
 import { data } from "../../static";
 import { useNavigate } from "react-router";
+import { useMemo } from "react";
+import getShortDescription from "../../utils/getShortDescription";
 
 interface Skill {
   title: string;
@@ -10,13 +12,22 @@ interface Skill {
   skills: string[];
 }
 
+interface Project {
+  id: string;
+  title: string;
+  description: string[];
+  datetime: string;
+  tags: string[];
+  images: string[];
+}
+
 function SkillCard({ title, description, skills }: Skill) {
   return (
     <article className={styles.skillCard}>
       <div className={styles.skillAccent} />
       <h3>{title}</h3>
-      {description.map((item) => (
-        <p>{item}</p>
+      {description.map((item, index) => (
+        <p key={`${title}-description-${index}`}>{item}</p>
       ))}
       <ul>
         {skills.map((skill) => (
@@ -33,6 +44,21 @@ function SkillCard({ title, description, skills }: Skill) {
 function Home() {
   const { locale } = useLanguageStore() as { locale: Locale | null };
   const navigator = useNavigate();
+  const projects = useMemo(
+    () => ((locale?.projectsList ?? []) as Project[]),
+    [locale?.projectsList]
+  );
+
+  const latestProjects = useMemo(
+    () =>
+      [...projects]
+        .sort(
+          (first, second) =>
+            new Date(second.datetime).getTime() - new Date(first.datetime).getTime()
+        )
+        .slice(0, 3),
+    [projects]
+  );
 
   return (
     <>
@@ -80,11 +106,73 @@ function Home() {
           </div>
         </section>
 
-        <section className={styles.section}>
+        <section className={styles.section} style={{marginBottom: 100}}>
           <div className={styles.sectionHeader}>
             <p className={styles.sectionLabel}>{locale?.home.projectsCard.subtitle}</p>
             <h2>{locale?.home.projectsCard.title}</h2>
           </div>
+          {latestProjects.length > 0 && (
+            <>
+              <div className={styles.projectsPreviewGrid}>
+                {latestProjects.map((project) => (
+                  <article
+                    key={project.id}
+                    className={`transition_fix ${styles.projectPreviewCard}`}
+                    onClick={() => navigator(`/project/${project.id}`)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        navigator(`/project/${project.id}`);
+                      }
+                    }}
+                  >
+                    <div className={styles.projectPreviewContent}>
+                      <div className={styles.projectPreviewMedia}>
+                        {project.images.length > 0 ? (
+                          <img
+                            src={project.images[0]}
+                            alt={project.title}
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div className={styles.projectPreviewFallback} />
+                        )}
+                      </div>
+                      <p className={styles.projectPreviewDate}>
+                        {new Date(project.datetime).toLocaleDateString(locale?.locale, {
+                          year: "numeric",
+                          month: "short"
+                        })}
+                      </p>
+                      <h3 className={styles.projectPreviewTitle}>{project.title}</h3>
+                      <p className={styles.projectPreviewDescription}>
+                        {getShortDescription(project.description, 180).join(" ")}
+                      </p>
+                    </div>
+                    <ul className={styles.projectPreviewTags}>
+                      {project.tags.slice(0, 3).map((tag) => {
+                        const icon = data.icons[tag]?.icon;
+                        return (
+                          <li key={`${project.id}-${tag}`} className="noselect">
+                            {icon && <img src={icon} alt={tag} />}
+                            <span>{tag}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+              <button
+                className={`transition_fix ${styles.moreButton}`}
+                onClick={() => navigator("/projects")}
+              >
+                {locale?.home.projectsCard.moreButton ?? "More..."}
+              </button>
+            </>
+          )}
         </section>
       </main>
     </>

@@ -1,0 +1,12 @@
+{
+  "short_name": "AtmSpheree",
+  "name": "AtmSpheree portfolio website",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone"
+}

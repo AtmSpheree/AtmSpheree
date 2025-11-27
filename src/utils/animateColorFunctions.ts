@@ -24,9 +24,9 @@ function makeGradient(color_1: string, color_2: string, time: number, time_step:
     result.push(color_1_rgba.map((value: number, index_value: number): number => {
       return index_value === 3 ?
         (value - color_2_rgba[index_value] <= 0 ?
-          Math.round((value + (color_step[index_value] * index)) * 10) / 10
+          Math.round((value + (color_step[index_value] * index)) * 100) / 100
         : 
-          Math.round((value - (color_step[index_value] * index)) * 10) / 10)
+          Math.round((value - (color_step[index_value] * index)) * 100) / 100)
       :
         (value - color_2_rgba[index_value] < 0 ?
           Math.round(value + (color_step[index_value] * (index + 1)))

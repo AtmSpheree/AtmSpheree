@@ -3,6 +3,7 @@ import { data, themes, type ColorGradients, type ThemeColor, type ThemeColorsVal
 import colorGradients from '../assets/colorGradients.json';
 import { sleep } from "../utils/sleep";
 import useLanguageStore from "./useLanguageStore";
+import changeTransitionFix from "../utils/changeTransitionFix";
 
 interface ThemeStore {
   theme: ThemeName;
@@ -36,10 +37,13 @@ const useThemeStore = create<ThemeStore>((set, get) => ({
       return;
     }
 
-    set({ theme: theme });
-
     if (get().isAnimating || useLanguageStore.getState().isAnimating) {
+      if (get().isAnimating) {
+        set({ theme: theme });
+      }
       return;
+    } else {
+      set({ theme: theme });
     }
 
     const colors: ThemeColorsValues = data.themes[theme].colors;
@@ -51,10 +55,15 @@ const useThemeStore = create<ThemeStore>((set, get) => ({
       for (const [key, value] of Object.entries(colors)) {
         root.style.setProperty(key, value);
       }
+      for (const [key, value] of Object.entries(data.themes[get().theme].filters)) {
+        root.style.setProperty(key, value);
+      }
       set({ isThemeInitialized: true });
     }
     else {
       set({ isAnimating: true });
+
+      changeTransitionFix(true);
 
       let color_assets: ColorGradients = colorGradients.theme_light_to_dark;
       let values_count: number = Math.floor(data.animation.theme.change / data.animation.theme.step) + 1;
@@ -78,7 +87,14 @@ const useThemeStore = create<ThemeStore>((set, get) => ({
         await sleep(10);
       } while (true)
       set({ isAnimating: false });
+
+      await sleep(10);
+      changeTransitionFix(false);
+
       for (const [key, value] of Object.entries(data.themes[get().theme].properties)) {
+        root.style.setProperty(key, value);
+      }
+      for (const [key, value] of Object.entries(data.themes[get().theme].filters)) {
         root.style.setProperty(key, value);
       }
     }

@@ -1,0 +1,451 @@
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.08);
+  }
+  to {
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+  }
+}
+
+.projectsPage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 6rem;
+  padding-bottom: 4rem;
+  color: var(--text-color);
+}
+
+.hero {
+  text-align: left;
+}
+
+.heroLabel {
+  margin: 0 0 0.2rem;
+  letter-spacing: 0.25em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.3rem);
+  max-width: 42ch;
+  line-height: 1.1;
+}
+
+.filtersSection {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.filtersGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.filterControl {
+  position: relative;
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 16px;
+  border: 1px solid var(--surface-border-color);
+  background: color-mix(in srgb, var(--bg-color) 95%, rgba(0, 0, 0, 0.05));
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  height: 46px;
+}
+
+.filterButton span {
+  white-space: nowrap;
+}
+
+.filterButtonActive {
+  border-color: color-mix(in srgb, var(--accent-color) 70%, transparent);
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color) 10%, var(--bg-color));
+}
+
+.filterState {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: inherit;
+}
+
+.filterValue {
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.counter {
+  font-size: 0.85rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-color) 15%, var(--bg-color));
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  min-width: 240px;
+  padding: 1rem;
+  background: color-mix(in srgb, var(--bg-color) 100%, transparent);
+  border: 1px solid var(--surface-border-color);
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dropdownNarrow {
+  min-width: 160px;
+}
+
+.dropdownLabel {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--text-muted-color);
+}
+
+.dropdownList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 0.2rem;
+}
+
+.dropdownOption, .dropdownOptionActive {
+  border: 1px solid transparent;
+  border-radius: 16px;
+  padding: 0.5rem 0.65rem;
+  background: transparent;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.dropdownOption:hover {
+  border-color: var(--surface-border-color);
+  background: color-mix(in srgb, var(--bg-color) 80%, transparent);
+}
+
+.dropdownOptionActive {
+  border-color: color-mix(in srgb, var(--accent-color) 70%, transparent);
+  background: color-mix(in srgb, var(--accent-color) 12%, var(--bg-color));
+}
+
+.optionMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 600;
+}
+
+.optionIconWrapper,
+.optionFallback {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--bg-color) 80%, transparent);
+  border: 1px solid var(--surface-border-color);
+}
+
+.optionIconWrapper img {
+  width: 18px;
+  height: 18px;
+  filter: var(--icon-filter);
+}
+
+.checkIcon {
+  color: var(--accent-color);
+}
+
+.searchWrapper {
+  flex: 1;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  border-radius: 16px;
+  border: 1px solid var(--surface-border-color);
+  background: color-mix(in srgb, var(--bg-color) 96%, rgba(0, 0, 0, 0.03));
+  box-sizing: border-box;
+  transition: .1s ease-in-out;
+}
+
+.searchWrapperActive {
+  border-color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color) 6%, var(--bg-color));
+}
+
+.searchWrapper input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  width: 100%;
+  color: var(--text-color);
+}
+
+.searchWrapper input::placeholder {
+  color: var(--text-muted-color);
+}
+
+.searchIcon {
+  color: var(--text-muted-color);
+}
+
+.searchWrapperActive .searchIcon {
+  color: var(--accent-color);
+}
+
+.clearButton {
+  border: none;
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  background: color-mix(in srgb, var(--bg-color) 80%, transparent);
+  color: var(--text-muted-color);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.clearButton:hover {
+  background: color-mix(in srgb, var(--accent-color) 10%, var(--bg-color));
+  color: var(--accent-color);
+}
+
+.projectsGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.emptyState {
+  display: flex;
+  justify-content: center;
+}
+
+.emptyState p {
+  border: 1px dashed var(--surface-border-color);
+  border-radius: 24px;
+  padding: 1rem 2rem;
+  max-width: 35rem;
+  text-align: center;
+  color: var(--text-muted-color);
+  font-weight: 600;
+}
+
+.projectCard {
+  border-radius: 28px;
+  border: 1px solid var(--surface-border-color);
+  padding: 1.5rem;
+  background: color-mix(in srgb, var(--bg-color) 96%, transparent);
+  box-shadow: 0 25px 60px var(--block-shadow-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  text-align: left;
+  overflow: hidden;
+}
+
+.cardAdditionalContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cardVisuals {
+  position: relative;
+  height: 220px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--surface-border-color);
+  background: color-mix(in srgb, var(--bg-color) 90%, transparent);
+  isolation: isolate;
+}
+
+.cardVisualsInteractive {
+  cursor: pointer;
+}
+
+.cardVisualsInteractive:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent-color) 70%, transparent);
+  outline-offset: 3px;
+}
+
+.cardImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  object-fit: contain;
+  background: color-mix(in srgb, var(--bg-color) 90%, transparent);
+}
+
+.cardImageActive {
+  z-index: 1;
+}
+
+.cardImageExiting {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.imageStepper {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--skill-color);
+  background: color-mix(in srgb, var(--bg-color) 65%, transparent);
+  border: 1px solid color-mix(in srgb, var(--surface-border-color) 60%, transparent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+  z-index: 100;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cardHeader h3 {
+  margin: 0.2rem 0 0;
+  font-size: 1.4rem;
+}
+
+.cardDate {
+  margin: 0;
+  color: var(--text-muted-color);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.viewButton {
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--accent-color) 70%, transparent);
+  color: var(--text-accent-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.viewButton:hover {
+  background-color: var(--accent-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color) 100%, transparent);
+  color: white;
+}
+
+.cardDescription {
+  margin: 0;
+  color: var(--text-soft-color);
+  line-height: 1.5;
+}
+
+.cardTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cardTags li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--surface-border-color);
+  font-size: 0.85rem;
+}
+
+.cardTags li span {
+  color: var(--skill-color);
+  font-weight: 500;
+}
+
+.cardTags li img {
+  width: 18px;
+  cursor: pointer;
+  filter: var(--icon-filter);
+}
+
+@media (max-width: 768px) {
+  .filtersSection {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filtersGroup {
+    width: 100%;
+  }
+
+  .filterControl,
+  .searchWrapper {
+    width: 100%;
+  }
+
+  .filterButton {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .projectCard {
+    animation: none;
+  }
+}
+
+@media (max-width: 445px) {
+  .projectsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "themes": {
+    "light": {
+      "colors": {
+        "--bg-color": "rgba(255, 255, 255, 1)",
+        "--text-color": "rgba(17, 17, 17, 1)",
+        "--skill-color": "rgba(17, 17, 17, 1)",
+        "--burger-color": "rgba(17, 17, 17, 1)",
+        "--text-accent-color": "rgba(0, 123, 255, 1)",
+        "--text-muted-color": "rgba(17, 17, 17, 0.65)",
+        "--text-soft-color": "rgba(17, 17, 17, 0.45)",
+        "--text-hero-button-color": "rgba(255, 255, 255, 1)",
+        "--language-switch-color": "rgba(17, 17, 17, 1)",
+        "--accent-color": "rgba(0, 123, 255, 1)",
+        "--block-shadow-color": "rgb(15, 15, 15, 0.15)",
+        "--switch-bg-color": "rgba(0, 123, 255, 0.5)",
+        "--surface-border-color": "rgba(17, 17, 17, 0.15)",
+        "--surface-muted-color": "rgba(17, 17, 17, 0.65)",
+        "--surface-soft-color": "rgba(17, 17, 17, 0.45)"
+      },
+      "filters": {
+        "--icon-filter": "invert(0%) sepia(7%) saturate(138%) hue-rotate(344deg) brightness(99%) contrast(87%)"
+      },
+      "properties": {
+        "color-scheme": "light"
+      }
+    },
+    "dark": {
+      "colors": {
+        "--bg-color": "rgba(14, 14, 14, 1)",
+        "--text-color": "rgba(245, 245, 245, 1)",
+        "--skill-color": "rgba(255, 255, 255, 1)",
+        "--burger-color": "rgba(245, 245, 245, 1)",
+        "--text-accent-color": "rgba(255, 180, 0, 1)",
+        "--text-muted-color": "rgba(245, 245, 245, 0.65)",
+        "--text-soft-color": "rgba(245, 245, 245, 0.45)",
+        "--text-hero-button-color": "rgba(255, 255, 255, 1)",
+        "--language-switch-color": "rgba(245, 245, 245, 1)",
+        "--accent-color": "rgba(255, 180, 0, 1)",
+        "--block-shadow-color": "rgb(15, 15, 15, 0)",
+        "--switch-bg-color": "rgba(255, 179, 0, 0.5)",
+        "--surface-border-color": "rgba(245, 245, 245, 0.15)",
+        "--surface-muted-color": "rgba(245, 245, 245, 0.65)",
+        "--surface-soft-color": "rgba(245, 245, 245, 0.45)"
+      },
+      "filters": {
+        "--icon-filter": "invert(95%) sepia(68%) saturate(107%) hue-rotate(186deg) brightness(116%) contrast(92%)"
+      },
+      "properties": {
+        "color-scheme": "dark"
+      }
+    }
+  },
+  "animation": {
+    "theme": {
+      "change": 250,
+      "step": 10,
+      "delay": null
+    },
+    "language": {
+      "change": 150,
+      "step": 10,
+      "delay": 150
+    }
+  },
+  "icons": {
+    "React": {
+      "icon": "/icons/react.svg",
+      "bgColor": "linear-gradient(120deg, rgb(0 129 255), rgb(0 72 143))"
+    },
+    "Laravel": {
+      "icon": "/icons/laravel.svg",
+      "bgColor": "linear-gradient(120deg, rgb(249, 50, 44), rgb(169 28 24))"
+    },
+    "Tilda": {
+      "icon": "/icons/tilda.svg",
+      "bgColor": "linear-gradient(120deg, rgb(154 154 154), rgb(60 60 60))"
+    },
+    "QT": {
+      "icon": "/icons/qt.svg",
+      "bgColor": "linear-gradient(120deg, rgb(65, 205, 82), rgb(29 120 40))"
+    },
+    "Python": {
+      "icon": "/icons/python.svg",
+      "bgColor": "linear-gradient(120deg, rgb(98 186 255), rgb(20 105 134))"
+    },
+    "JavaScript": {
+      "icon": "/icons/javascript.svg",
+      "bgColor": "linear-gradient(120deg, rgb(232 207 0), rgb(174 156 0))"
+    },
+    "TypeScript": {
+      "icon": "/icons/typescript.svg",
+      "bgColor": "linear-gradient(120deg, rgb(69 127 236), rgb(13 82 154))"
+    },
+    "PHP": {
+      "icon": "/icons/php.svg",
+      "bgColor": "linear-gradient(120deg, rgb(116 141 254), rgb(45 56 111))"
+    },
+    "FastAPI": {
+      "icon": "/icons/fastapi.svg",
+      "bgColor": null
+    },
+    "Nginx / Apache": {
+      "icon": "/icons/server.svg",
+      "bgColor": null
+    },
+    "Vite": {
+      "icon": "/icons/vite.svg",
+      "bgColor": null
+    },
+    "SQL": {
+      "icon": "/icons/database.svg",
+      "bgColor": null
+    },
+    "Figma": {
+      "icon": "/icons/figma.svg",
+      "bgColor": null
+    },
+    "Personal": {
+      "icon": "/icons/user.svg",
+      "bgColor": "var(--accent-color)"
+    },
+    "Other": {
+      "icon": "/icons/other.svg",
+      "bgColor": null
+    },
+    "Web": {
+      "icon": "/icons/web.svg",
+      "bgColor": "var(--accent-color)"
+    },
+    "Desktop": {
+      "icon": "/icons/desktop.svg",
+      "bgColor": "var(--accent-color)"
+    },
+    "PyGame": {
+      "icon": "/icons/python.svg",
+      "bgColor": null
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import dataJson from "./assets/data.json";
+
 // Static data
 
 export const languages = ["en", "ru"];
@@ -9,15 +11,29 @@ export const themes = [
 
 export const themeColors: string[] = [
   "--bg-color",
-  "--language--switch",
   "--text-color",
+  "--skill-color",
+  "--burger-color",
+  "--text-accent-color",
+  "--text-muted-color",
+  "--text-soft-color",
+  "--text-hero-button-color",
+  "--language-switch-color",
   "--accent-color",
-  "--switch-bg-color"
+  "--block-shadow-color",
+  "--switch-bg-color",
+  "--surface-border-color",
+  "--surface-muted-color",
+  "--surface-soft-color"
 ];
 
 export interface ThemeProperties {
   "color-scheme": "light" | "dark";
 }
+
+export const themeFilters: string[] = [
+  "--icon-filter"
+];
 
 // Data types
 
@@ -25,11 +41,16 @@ export type ThemeName = typeof themes[number];
 
 export type ThemeColor = typeof themeColors[number];
 
+export type ThemeFilter = typeof themeFilters[number];
+
 export type ThemeColorsValues = Record<ThemeColor, string>;
+
+export type ThemeFiltersValues = Record<ThemeFilter, string>
 
 export interface Theme {
   colors: ThemeColorsValues;
   properties: ThemeProperties;
+  filters: ThemeFiltersValues
 }
 
 export interface AnimationProperties {
@@ -38,54 +59,17 @@ export interface AnimationProperties {
   delay: number | null
 }
 
+export type Icon = Record<string, {"icon": string, "bgColor": string | null}>;
+
 export interface Data {
-  themes: Record<ThemeName, Theme>,
+  themes: Record<ThemeName, Theme>;
   animation: {
     theme: AnimationProperties,
     language: AnimationProperties
-  }
+  };
+  icons: Icon
 }
 
 export type ColorGradients = Record<keyof ThemeColorsValues, string[]>;
 
-export const data: Data = {
-  themes: {
-    light: {
-      colors: {
-        "--bg-color": "rgba(255, 255, 255, 1)",
-        "--text-color": "rgba(17, 17, 17, 1)",
-        "--language--switch": "rgba(17, 17, 17, 1)",
-        "--accent-color": "rgba(0, 123, 255, 1)",
-        "--switch-bg-color": "rgba(0, 123, 255, 0.5)"
-      },
-      properties: {
-        "color-scheme": "light"
-      }
-    },
-    dark: {
-      colors: {
-        "--bg-color": "rgba(14, 14, 14, 1)",
-        "--text-color": "rgba(245, 245, 245, 1)",
-        "--language--switch": "rgba(245, 245, 245, 1)",
-        "--accent-color": "rgba(255, 180, 0, 1)",
-        "--switch-bg-color": "rgba(255, 179, 0, 0.5)",
-      },
-      properties: {
-        "color-scheme": "dark"
-      }
-    },
-  },
-  animation: {
-    theme: {
-      change: 250,
-      step: 10,
-      delay: null
-    },
-    language: {
-      change: 150,
-      step: 10,
-      delay: 100
-    }
-  }
-};
-
+export const data: Data = dataJson as Data;

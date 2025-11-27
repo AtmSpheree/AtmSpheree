@@ -1,8 +1,508 @@
 {
-  "main": {
-
+  "locale": "ru",
+  "tags": {
+    "personal": "Личное"
   },
   "home": {
-    "greetings": "Привет!"
-  }
+    "header": {
+      "logotypeText": "мой гитхаб",
+      "homeText": "Главная",
+      "projectsText": "Проекты",
+      "contactsText": "Связь",
+      "mobileMenuText": "Навигация"
+    },
+    "mainCard": {
+      "greetings": "Обо мне",
+      "lastname": "Кондрашов",
+      "firstname": "Григорий",
+      "description": "Разработчик веб приложений и настольных систем",
+      "addition": "Внештатная / удалённая работа",
+      "skills": [
+        "React",
+        "Laravel",
+        "Tilda",
+        "QT",
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "PHP",
+        "FastAPI",
+        "Nginx / Apache",
+        "Vite",
+        "SQL",
+        "Figma"
+      ],
+      "toProjectsButton": "Проекты",
+      "contactMeButton": "Связь со мной"
+    },
+    "skillsCard": {
+      "subtitle": "Навыки",
+      "title": "Создаю современные интерфейсы, продуманные до мелочей",
+      "cards": [
+        {
+          "title": "Веб-приложения",
+          "description": ["Удобный и простой дизайн, подключение домена, хостинга, базы данных, взаимодействие с внешними сервисами.", "Доступно на любом устройстве."],
+          "skills": [
+            "React",
+            "Laravel",
+            "FastAPI",
+            "Tilda"
+          ]
+        },
+        {
+          "title": "Настольные приложения",
+          "description": ["Централизованное управление, автоматизация частых рабочих процессов.", "Индивидуально для конкретных задач."],
+          "skills": [
+            "Python",
+            "QT",
+            "SQL"
+          ]
+        },
+        {
+          "title": "Поддержка",
+          "description": ["Внедрение нового функционала, обновление уже имеющегося, тестирование и оптимизация готовых систем."],
+          "skills": [
+            "Figma"
+          ]
+        }
+      ]
+    },
+    "projectsCard": {
+      "subtitle": "Проекты"
+    }
+  },
+  "projects": {
+    "title": "Проекты",
+    "description": "Примеры моих работ из разных областей разработки.",
+    "filters": {
+      "searchLabel": "Название",
+      "dateLabel": "Год",
+      "sortLabel": "Сортировка",
+      "sortNewFirst": "Сначала новые",
+      "sortOldFirst": "Сначала старые",
+      "tagsLabel": "Теги",
+      "clear": "Сбросить"
+    },
+    "viewButton": "Перейти",
+    "emptyState": "Нет проектов, подходящих под выбранные фильтры."
+  },
+  "project": {
+    "backToProjects": "К проектам",
+    "viewButton": "Перейти",
+    "summaryTitle": "Содержание",
+    "dateTitle": "Дата",
+    "stackTitle": "Тэги"
+  },
+  "projectsList": [
+    {
+      "id": "minesweeper",
+      "title": "Игра 'Сапёр'",
+      "description": ["Всего лишь небезызвестная игра 'Сапёр' на библиотеке PyQT языка программирования Python. Была написана в качестве первого мини-проекта, когда я только начинал свой путь в IT."],
+      "images": [
+        "/images/projects/minesweeper-1.png",
+        "/images/projects/minesweeper-2.png"
+      ],
+      "datetime": "2022-11-14",
+      "tags": [
+        "Python",
+        "QT",
+        "SQL",
+        "Desktop"
+      ],
+      "url": "https://github.com/AtmSpheree/minesweeper"
+    },
+    {
+      "id": "lma_trainer",
+      "title": "Тренажёр для развития логики, памяти и внимания 'LMA-trainer'",
+      "description": ["Приложение, содержащие различные упражнения в игровой форме для развития когнитивных функций. Практического применения не получило. Проект был создан в рамках XI конкурса проектов и прикладных исследований школьников и студентов на основе реальных задач работодателей 'Школа реальных дел'. Мой одногруппник создал дизайн интерфейса, я - реализовал его в виде десктопного приложения. Проект был защищён на финальном этапе конкурса в НИУ ВШЭ (Москва) и занял первое место в своей категории."],
+      "images": [
+        "/images/projects/lma-trainer-1.png",
+        "/images/projects/lma-trainer-2.png",
+        "/images/projects/lma-trainer-3.png",
+        "/images/projects/lma-trainer-4.png",
+        "/images/projects/lma-trainer-5.png",
+        "/images/projects/lma-trainer-6.png",
+        "/images/projects/lma-trainer-7.png",
+        "/images/projects/lma-trainer-8.png",
+        "/images/projects/lma-trainer-9.png",
+        "/images/projects/lma-trainer-10.png",
+        "/images/projects/lma-trainer-11.png",
+        "/images/projects/lma-trainer-12.png",
+        "/images/projects/lma-trainer-13-ru.png"
+      ],
+      "datetime": "2023-05-14",
+      "tags": [
+        "Personal",
+        "Python",
+        "SQL",
+        "PyGame",
+        "Figma",
+        "Desktop"
+      ],
+      "url": "https://github.com/AtmSpheree/lma-trainer"
+    },
+    {
+      "id": "history_questionnaires",
+      "title": "Веб-приложение для прохождения тестов по истории",
+      "description": ["Приложение для создания тестов по истории администратором; прохождения тестов учащимися по коду. Было написано в качестве диплома. Серверная часть реализована с помощью FastAPI, работает на Yandex Cloud (российский аналог AWS). Один из моих первых 'больших' проектов, написанных на React. Написан примерно за неделю."],
+      "images": [
+        "/images/projects/history-questionnaries-1.png",
+        "/images/projects/history-questionnaries-2.png",
+        "/images/projects/history-questionnaries-3.png",
+        "/images/projects/history-questionnaries-4.png",
+        "/images/projects/history-questionnaries-5.png",
+        "/images/projects/history-questionnaries-6.png",
+        "/images/projects/history-questionnaries-7.png",
+        "/images/projects/history-questionnaries-8.png"
+      ],
+      "datetime": "2024-06-03",
+      "tags": [
+        "Personal",
+        "Python",
+        "JavaScript",
+        "FastAPI",
+        "React",
+        "Figma",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/history_questionnaires"
+    },
+    {
+      "id": "tsi_qt_project",
+      "title": "Программа-глоссарий терминов для преподавателей",
+      "description": [
+        "Небольшая предыстория: На 2 курсе обучения в колледже у меня появился спец. предмет - 'Технические средства информатизации' (сокращённо ТСИ). Я заключил с преподавателем этой дисциплины небольшую сделку: я создаю программу по выданному им техническому заданию, а он ставит мне зачёт и разрешает не появляться на его занятиях.",
+        "Изначально проект задумывался как глоссарий различных технических терминов по конкретной дисциплине (ТСИ): администратор (преподаватель) мог бы заводить в него определения терминов, после - выдавать программу студентам (для дальнейшего изучения).",
+        "Так как техническое задание не было составлено в полном объёме и в связи с моим 'энтузиазмом', функционал программы был значительно расширен: была добавлена возможность не только работать с уже созданными дисциплинами, но и создавать свои.",
+        "Все дисциплины хранятся в отдельных базах данных, пути к которым можно гибко настраивать и редактировать.",
+        "Все данные также хранятся в зашифрованном с помощью алгоритма Fernet виде, т.е. обычный пользователь не может получить доступ к информации из баз данных, изменить или как-то их скомпрометировать.",
+        "Программа создавалась в течении года, содержит множество окон с адаптивном интерфейсом и является одним из моих самых объёмных проектов на QT. К сожалению, практического применения так и не получила."
+      ],
+      "images": [
+        "/images/projects/tsi-qt-project-1.png"
+      ],
+      "datetime": "2024-08-17",
+      "tags": [
+        "Python",
+        "QT",
+        "SQL",
+        "Desktop"
+      ],
+      "url": "https://github.com/AtmSpheree/tsi_qt_project"
+    },
+    {
+      "id": "vk-liveslides-miniapp",
+      "title": "Мини-приложение ВКонтакте для создания интерактивных презентаций.",
+      "description": [
+        "Мини-приложение на базе социальной сети ВКонтакте (с использованием его API и авторизации), в котором пользователи могут создавать интерактивные презентации, а после, в режиме реального времени презентовать свои идеи зрителям. Серверная часть реализована с помощью FastAPI, работает на Yandex Cloud (российский аналог AWS).",
+        "В приложении есть удобный редактор презентаций, платная подписка для увеличения количества презентаций, файлового хранилища, числа подключаемых пользователей.",
+        "Было создано совместно с преподавателем моего колледжа для грантовой программы VK Freshcode 2024 и попало в 24 из 240 лучших проектов в категории 'B2B сервисы для сообществ'."
+      ],
+      "images": [
+        "/images/projects/vk-liveslides-miniapp-1.jpg",
+        "/images/projects/vk-liveslides-miniapp-2.jpg",
+        "/images/projects/vk-liveslides-miniapp-3.jpg",
+        "/images/projects/vk-liveslides-miniapp-4.jpg",
+        "/images/projects/vk-liveslides-miniapp-5.jpg",
+        "/images/projects/vk-liveslides-miniapp-6.jpg",
+        "/images/projects/vk-liveslides-miniapp-7-ru.png",
+        "/images/projects/vk-liveslides-miniapp-8.jpg"
+      ],
+      "datetime": "2024-12-09",
+      "tags": [
+        "Personal",
+        "Python",
+        "FastAPI",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Figma",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/vk-liveslides-miniapp"
+    },
+    {
+      "id": "status_requests",
+      "title": "Веб-приложение для обработки заявок на ремонт оборудования",
+      "description": [
+        "Приложение, в котором пользователи могут регистрироваться, отправлять заявки на ремонт различного оборудования; администратор может просматривать их, изменять статус. Серверная часть реализована с помощью FastAPI, работает на Yandex Cloud (российский аналог AWS).",
+        "Было написано в качестве курсового проекта для моего одногруппника. Он создал дизайн интерфейса на Figma, я - реализовал его в виде веб-приложения на React.",
+        "Содержит механизмы подтверждения регистрации и сброса пароля с помощью почты (используется генерация зашифрованных ссылок с помощью Fernet).",
+        "Проект был написан всего за месяц и получился очень качественным с точки зрения дизайна, функционала, структуры исходного кода, а также использования различных технологий 'продвинутого' уровня (кастомных хуков, переиспользование компонентов и т.п.)."
+      ],
+      "images": [
+        "/images/projects/status-requests-1.png",
+        "/images/projects/status-requests-2.png",
+        "/images/projects/status-requests-3.png",
+        "/images/projects/status-requests-4.png",
+        "/images/projects/status-requests-5.png",
+        "/images/projects/status-requests-6.png",
+        "/images/projects/status-requests-7.png",
+        "/images/projects/status-requests-8.png",
+        "/images/projects/status-requests-9.png",
+        "/images/projects/status-requests-10.png",
+        "/images/projects/status-requests-11.png",
+        "/images/projects/status-requests-12.png",
+        "/images/projects/status-requests-13.png",
+        "/images/projects/status-requests-14.png",
+        "/images/projects/status-requests-15.png",
+        "/images/projects/status-requests-16.png",
+        "/images/projects/status-requests-17.png",
+        "/images/projects/status-requests-18.png"
+      ],
+      "datetime": "2025-01-15",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Figma",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/status_requests"
+    },
+    {
+      "id": "championship-2025",
+      "title": "Чемпионат 'Профессионалы 2025', 'Веб-технологии'",
+      "description": [
+        "В 2025 году я занял 1 место на региональном этапе чемпионата 'Профессионалы' в компетенции 'Веб-технологии', после чего выступал уже на всероссийском этапе от Московской области.",
+        "Неделя, в течение которой проходил чемпионат, стала для меня очень напряжённой, ещё и учитывая то, что я никогда до этого не участвовал в конкурсных мероприятиях подобных масштабов.",
+        "Применив все свои накопленные за несколько лет знания, из 59 участников со всей территории страны я смог войти в десятку лучших, заняв в ней 10 место."
+      ],
+      "images": [
+        "/images/projects/championship-2025-1.jpg",
+        "/images/projects/championship-2025-2.png"
+      ],
+      "datetime": "2025-04-15",
+      "tags": [
+        "Personal",
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Web"
+      ]
+    },
+    {
+      "id": "motorcycles-catalog.local",
+      "title": "Веб-приложение 'Онлайн каталог мототехники'",
+      "description": [
+        "Приложение, созданное в качестве диплома. Клиентская часть написана на React, серверная - на Laravel (PHP). Интерфейс реализован с использованием css библиотеки bootstrap.",
+        "Ничего особо выдающегося в этом проекте нет. Один из 6 дипломных проектов, написанных с целью заработка."
+      ],
+      "images": [
+        "/images/projects/motorcycles-catalog-local-1.png",
+        "/images/projects/motorcycles-catalog-local-2.png",
+        "/images/projects/motorcycles-catalog-local-3.png",
+        "/images/projects/motorcycles-catalog-local-4.png",
+        "/images/projects/motorcycles-catalog-local-5.png",
+        "/images/projects/motorcycles-catalog-local-6.png",
+        "/images/projects/motorcycles-catalog-local-7.png",
+        "/images/projects/motorcycles-catalog-local-8.png",
+        "/images/projects/motorcycles-catalog-local-9.png",
+        "/images/projects/motorcycles-catalog-local-10.png",
+        "/images/projects/motorcycles-catalog-local-11.png"
+      ],
+      "datetime": "2025-04-28",
+      "tags": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Nginx / Apache",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/motorcycles-catalog.local"
+    },
+    {
+      "id": "gas-equipment-requests.local",
+      "title": "Веб-приложение 'Заявки на ремонт газового оборудования'",
+      "description": [
+        "Приложение, созданное в качестве диплома. Клиентская часть написана на React, серверная - на Laravel (PHP). Интерфейс реализован с использованием css библиотеки bootstrap.",
+        "Ничего особо выдающегося в этом проекте нет. Один из 6 дипломных проектов, написанных с целью заработка."
+      ],
+      "images": [
+        "/images/projects/gas-equipment-requests-local-1.png",
+        "/images/projects/gas-equipment-requests-local-2.png",
+        "/images/projects/gas-equipment-requests-local-3.png",
+        "/images/projects/gas-equipment-requests-local-4.png",
+        "/images/projects/gas-equipment-requests-local-5.png",
+        "/images/projects/gas-equipment-requests-local-6.png",
+        "/images/projects/gas-equipment-requests-local-7.png",
+        "/images/projects/gas-equipment-requests-local-8.png",
+        "/images/projects/gas-equipment-requests-local-9.png",
+        "/images/projects/gas-equipment-requests-local-10.png",
+        "/images/projects/gas-equipment-requests-local-11.png"
+      ],
+      "datetime": "2025-05-12",
+      "tags": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Nginx / Apache",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/gas-equipment-requests.local"
+    },
+    {
+      "id": "project-management.local",
+      "title": "Веб-приложение 'Система управления проектами'",
+      "description": [
+        "Приложение, созданное в качестве диплома. Клиентская часть написана на React, серверная - на Laravel (PHP). Интерфейс реализован с использованием css библиотеки bootstrap.",
+        "Ничего особо выдающегося в этом проекте нет. Один из 6 дипломных проектов, написанных с целью заработка."
+      ],
+      "images": [
+        "/images/projects/project-management-local-1.png",
+        "/images/projects/project-management-local-2.png",
+        "/images/projects/project-management-local-3.png",
+        "/images/projects/project-management-local-4.png",
+        "/images/projects/project-management-local-5.png",
+        "/images/projects/project-management-local-6.png",
+        "/images/projects/project-management-local-7.png",
+        "/images/projects/project-management-local-8.png",
+        "/images/projects/project-management-local-9.png",
+        "/images/projects/project-management-local-10.png",
+        "/images/projects/project-management-local-11.png"
+      ],
+      "datetime": "2025-05-17",
+      "tags": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Nginx / Apache",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/project-management.local"
+    },
+    {
+      "id": "time-management.local",
+      "title": "Веб-приложение 'Система управления рабочим временем сотрудников'",
+      "description": [
+        "Приложение, созданное в качестве диплома. Клиентская часть написана на React, серверная - на Laravel (PHP). Интерфейс реализован с использованием css библиотеки bootstrap.",
+        "Ничего особо выдающегося в этом проекте нет. Один из 6 дипломных проектов, написанных с целью заработка."
+      ],
+      "images": [
+        "/images/projects/time-management-local-1.png",
+        "/images/projects/time-management-local-2.png",
+        "/images/projects/time-management-local-3.png",
+        "/images/projects/time-management-local-4.png",
+        "/images/projects/time-management-local-5.png",
+        "/images/projects/time-management-local-6.png",
+        "/images/projects/time-management-local-7.png",
+        "/images/projects/time-management-local-8.png"
+      ],
+      "datetime": "2025-05-26",
+      "tags": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Nginx / Apache",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/time-management.local"
+    },
+    {
+      "id": "sales-management.local",
+      "title": "Веб-приложение 'Система управления продажами'",
+      "description": [
+        "Приложение, созданное в качестве диплома. Клиентская часть написана на React, серверная - на Laravel (PHP). Интерфейс реализован с использованием css библиотеки bootstrap.",
+        "Ничего особо выдающегося в этом проекте нет. Один из 6 дипломных проектов, написанных с целью заработка."
+      ],
+      "images": [
+        "/images/projects/sales-management-local-1.png",
+        "/images/projects/sales-management-local-2.png",
+        "/images/projects/sales-management-local-3.png",
+        "/images/projects/sales-management-local-4.png",
+        "/images/projects/sales-management-local-5.png",
+        "/images/projects/sales-management-local-6.png",
+        "/images/projects/sales-management-local-7.png",
+        "/images/projects/sales-management-local-8.png",
+        "/images/projects/sales-management-local-9.png",
+        "/images/projects/sales-management-local-10.png"
+      ],
+      "datetime": "2025-06-01",
+      "tags": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Nginx / Apache",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/sales-management.local"
+    },
+    {
+      "id": "product-management.local",
+      "title": "Веб-приложение 'Система управления продуктами'",
+      "description": [
+        "Приложение, созданное в качестве диплома. Клиентская часть написана на React, серверная - на Laravel (PHP). Интерфейс реализован с использованием css библиотеки bootstrap.",
+        "Ничего особо выдающегося в этом проекте нет. Один из 6 дипломных проектов, написанных с целью заработка."
+      ],
+      "images": [
+        "/images/projects/product-management-local-1.png",
+        "/images/projects/product-management-local-2.png",
+        "/images/projects/product-management-local-3.png",
+        "/images/projects/product-management-local-4.png",
+        "/images/projects/product-management-local-5.png",
+        "/images/projects/product-management-local-6.png",
+        "/images/projects/product-management-local-7.png",
+        "/images/projects/product-management-local-8.png"
+      ],
+      "datetime": "2025-06-05",
+      "tags": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Nginx / Apache",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/product-management.local"
+    },
+    {
+      "id": "master-elements",
+      "title": "Дизайн мини-приложения ВКонтакте",
+      "description": [
+        "Выиграв грантовую программу VK Freshcode 2024 от ВКонтакте, я решил попробовать поучаствовать в ней в 2025 году. Была сформирована идея приложения-игры, создан дизайн, прототип на Figma.",
+        "К сожалению, проект не вошёл в список победителей в первом этапе презентации идей приложений, поэтому было решено не реализовывать его в дальнейшем."
+      ],
+      "images": [
+        "/images/projects/master-elements-1.png"
+      ],
+      "datetime": "2025-07-31",
+      "tags": [
+        "Figma",
+        "Web"
+      ],
+      "url": "https://www.figma.com/proto/JqEOImCiX25fKq6NGcRRb8/master_elements?page-id=0%3A1&node-id=76-101&p=f&viewport=175%2C144%2C0.17&t=eKnDeJH8wL9Ginev-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A4&show-proto-sidebar=1"
+    },
+    {
+      "id": "dm-monuments",
+      "title": "Вебсайт для бизнеса по созданию и росписи памятников",
+      "description": [
+        "Мой первый большой проект на Tilda. Использованы обработанные с помощью нейросетей изображения, внешние js скрипты, форма для отправки заявок, внешний сервис для отображения отзывов. Сайт сделан с поддержкой двух языков - английского и французского."
+      ],
+      "images": [
+        "/images/projects/dm-monuments-1.png"
+      ],
+      "datetime": "2025-09-21",
+      "tags": [
+        "JavaScript",
+        "Tilda",
+        "Web"
+      ],
+      "url": "https://dm-monuments.ca"
+    }
+  ]
 }

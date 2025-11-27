@@ -1,0 +1,300 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 6rem;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.hero {
+  padding: 2.5rem;
+  border-radius: 28px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color) 25%, transparent),
+    color-mix(in srgb, var(--bg-color) 85%, transparent)
+  );
+  border: 1px solid var(--surface-border-color);
+  box-shadow: 0 25px 60px var(--block-shadow-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.greeting {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.heroName {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.lastName {
+  color: var(--text-accent-color);
+}
+
+.heroDescription {
+  font-size: 1.2rem;
+  margin: 0.75rem 0 0;
+  max-width: 38ch;
+}
+
+.heroCaption {
+  margin: 0.25rem 0 0;
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+.heroHighlights {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.heroHighlightOrdinary, .heroHighlightSpecial {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heroHighlightOrdinary span, .heroHighlightSpecial span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.heroHighlightOrdinary img, .heroHighlightSpecial img {
+  width: 18px;
+  cursor: pointer;
+}
+
+.heroHighlightOrdinary {
+  border: 1px solid var(--surface-border-color);
+}
+
+.heroHighlightOrdinary span {
+  color: var(--skill-color);
+}
+
+.heroHighlightOrdinary img {
+  filter: var(--icon-filter);
+}
+
+.heroHighlightSpecial span {
+  color: white;
+}
+
+.heroHighlightSpecial img {
+  filter: invert(100%) sepia(100%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
+}
+
+.heroMainButton {
+  position: relative;
+  width: 8.5rem;
+  padding: 0.35rem 1.2rem;
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 70%, #ffffff 15%));
+  border-radius: 17px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid color-mix(in srgb, var(--accent-color) 70%, transparent);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), inset 0 0 25px rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.heroMainButton::before,
+.heroMainButton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.heroMainButton::before {
+  background: radial-gradient(60% 160% at 10% 50%, rgba(255, 255, 255, 0.9), transparent 65%);
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.heroMainButton::after {
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.2), transparent 70%);
+  transform: translateX(-130%);
+  animation: heroButtonShimmer 2.4s linear infinite;
+  mix-blend-mode: screen;
+}
+
+.heroMainButton p {
+  color: var(--text-hero-button-color);
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 2px;
+  transition: transform 0.35s ease;
+}
+
+.heroMainButton img {
+  width: 25px;
+  filter: invert(100%) sepia(100%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
+  transition: transform 0.35s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .heroMainButton:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35), inset 0 0 20px rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .heroMainButton:hover::before {
+    opacity: 0.2;
+    transform: scale(1.05);
+  }
+
+  .heroMainButton:hover p {
+    transform: translateX(6px);
+  }
+
+  .heroMainButton:hover img {
+    transform: translateX(2px) rotate(-8deg) scale(1.05);
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sectionLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--text-soft-color);
+  margin: 0;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.skillCard {
+  padding: 1.75rem;
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--bg-color) 90%, transparent);
+  border: 1px solid var(--surface-border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 220px;
+}
+
+.skillCard h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.skillCard p {
+  margin: 0;
+  color: var(--text-muted-color);
+  flex: 1;
+}
+
+.skillCard ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skillCard li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-color) 20%, transparent);
+}
+
+.skillCard span {
+  font-size: 0.85rem;
+  color: var(--skill-color);
+}
+
+.skillCard li img {
+  width: 18px;
+  transition: filter .25;;
+  filter: var(--icon-filter);
+}
+
+.skillAccent {
+  width: 42px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 2rem;
+  }
+
+  .skillCard {
+    padding: 1.5rem;
+  }
+}
+
+@keyframes heroButtonShimmer {
+  0% {
+    transform: translateX(-130%);
+  }
+  100% {
+    transform: translateX(130%);
+  }
+}
+
+@media (max-width: 1390px) {
+  .skillCard ul {
+    height: 72px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 655px) {
+  .skillCard ul {
+    height: auto;
+  }
+}

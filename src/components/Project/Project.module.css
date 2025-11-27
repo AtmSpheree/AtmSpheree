@@ -1,0 +1,391 @@
+@keyframes projectGlow {
+  from {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.08);
+  }
+  to {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+  }
+}
+
+.projectPage {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 5.5rem;
+  padding-bottom: 4rem;
+  color: var(--text-color);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  text-align: left;
+}
+
+.backButton {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 12px;
+  border: 1px solid var(--surface-border-color);
+  padding: 0.4rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: color-mix(in srgb, var(--bg-color) 95%, rgba(0, 0, 0, 0.02));
+  color: var(--text-color);
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.backButton svg {
+  flex-shrink: 0;
+}
+
+.backButton:hover {
+  border-color: color-mix(in srgb, var(--accent-color) 70%, transparent);
+  color: var(--accent-color);
+}
+
+.heroLabel {
+  margin: 0.35rem 0 0;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--accent-color);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  line-height: 1.05;
+  max-width: 30ch;
+}
+
+.heroMeta {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  color: var(--text-soft-color);
+  font-size: 0.95rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.galleryMain {
+  position: relative;
+  border-radius: 28px;
+  border: 1px solid var(--surface-border-color);
+  background: color-mix(in srgb, var(--bg-color) 88%, transparent);
+  min-height: 380px;
+  overflow: hidden;
+  isolation: isolate;
+  animation: projectGlow 4s ease-in-out infinite alternate;
+}
+
+.galleryMainInteractive {
+  cursor: zoom-in;
+}
+
+.galleryMainInteractive:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent-color) 70%, transparent);
+  outline-offset: 3px;
+}
+
+.cornerArrow {
+  position: absolute;
+  top: 14px;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  border: 1px solid var(--surface-border-color);
+  background: color-mix(in srgb, var(--bg-color) 82%, transparent);
+  color: var(--text-color);
+  z-index: 3;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.2s ease, color 0.2s ease,
+    background 0.2s ease;
+}
+
+.cornerArrow svg {
+  pointer-events: none;
+}
+
+.cornerArrow:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent-color) 65%, transparent);
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--bg-color) 75%, transparent);
+}
+
+.cornerArrowLeft {
+  left: 14px;
+}
+
+.cornerArrowRight {
+  right: 14px;
+}
+
+.galleryImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 28px;
+}
+
+.galleryImageActive {
+  z-index: 1;
+}
+
+.galleryImageExiting {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.imageStepper {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-color);
+  background: color-mix(in srgb, var(--bg-color) 65%, transparent);
+  border: 1px solid color-mix(in srgb, var(--surface-border-color) 60%, transparent);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.thumbnailRow {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  width: 90px;
+  height: 70px;
+  border-radius: 16px;
+  border: 1px solid var(--surface-border-color);
+  overflow: hidden;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbnailActive {
+  border-color: color-mix(in srgb, var(--accent-color) 65%, transparent);
+  transform: translateY(-3px);
+}
+
+.details {
+  border-radius: 28px;
+  border: 1px solid var(--surface-border-color);
+  background: color-mix(in srgb, var(--bg-color) 96%, transparent);
+  box-shadow: 0 25px 60px var(--block-shadow-color);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.sectionLabel {
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--text-soft-color);
+}
+
+.description {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.metaValue {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text-muted-color);
+}
+
+.tagsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tagsList li {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.tagsList li span {
+  color: var(--skill-color);
+  font-weight: 500;
+}
+
+.tagsList li img {
+  width: 18px;
+  cursor: pointer;
+  filter: var(--icon-filter);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--accent-color) 70%, transparent);
+  color: var(--text-accent-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+  width: fit-content;
+}
+
+.ctaButton:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+}
+
+.notFound {
+  margin: 6rem auto;
+  padding: 2.5rem;
+  border-radius: 28px;
+  border: 1px dashed var(--surface-border-color);
+  color: var(--text-soft-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.notFound p {
+  margin: 0;
+  text-align: center;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 999;
+}
+
+.lightboxContent {
+  position: relative;
+  max-width: calc(100vw - 3rem);
+  max-height: calc(100vh - 3rem);
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxImage {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--surface-border-color);
+  background: color-mix(in srgb, var(--bg-color) 85%, transparent);
+  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.2s ease,
+    background 0.2s ease, color 0.2s ease;
+}
+
+.lightboxClose:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent-color) 70%, transparent);
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--bg-color) 78%, transparent);
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .details {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .galleryMain {
+    min-height: 280px;
+  }
+
+  .metaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .thumbnail {
+    min-width: 80px;
+  }
+}

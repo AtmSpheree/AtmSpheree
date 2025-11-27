@@ -10,11 +10,25 @@
 }
   
 .language_switch_handle {
-  color: var(--language--switch);
+  color: var(--language-switch-color);
   font-weight: 900;
   padding: 5px;
   transition: .15s;
   font-size: 25px;
+  position: relative;
+  min-width: 36px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language_switch_label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (hover: hover) and (pointer: fine) {

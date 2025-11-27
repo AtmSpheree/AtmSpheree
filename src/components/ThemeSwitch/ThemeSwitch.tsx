@@ -3,9 +3,11 @@ import { FiSun, FiMoon } from "react-icons/fi";
 import styles from "./ThemeSwitch.module.css";
 import { data } from "../../static";
 import useThemeStore from "../../store/useThemeStore";
+import useLanguageStore from "../../store/useLanguageStore";
 
 function ThemeSwitch() {
   const { theme, toggleTheme } = useThemeStore();
+  const { isAnimating } = useLanguageStore();
 
   return (
     <button
@@ -17,10 +19,11 @@ function ThemeSwitch() {
     >
       <motion.div
         className={styles.theme_switch_handle}
-        layout
+        layout="position"
+        layoutScroll
         transition={{
           type: "spring",
-          duration: data.animation.theme.change / 1000,
+          duration: isAnimating ? 0 : data.animation.theme.change / 1000,
           bounce: 0.2,
         }}
       >

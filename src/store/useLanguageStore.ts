@@ -4,10 +4,11 @@ import { sleep } from "../utils/sleep";
 import colorGradients from '../assets/colorGradients.json';
 import useThemeStore from "./useThemeStore";
 import { data } from "../static";
+import changeTransitionFix from "../utils/changeTransitionFix";
 
 type Language = typeof languages[number];
 
-export type Locale = Record<string, Record<string, string>>;
+export type Locale = Record<string, any>;
 
 interface LanguageStore {
   language: Language;
@@ -46,6 +47,9 @@ const useLanguageStore = create<LanguageStore>((set, get) => ({
     }
     
     set({ isAnimating: true });
+
+    changeTransitionFix(true);
+
     const colors: ThemeColorsValues = Object.fromEntries(Object.entries(data.themes[useThemeStore.getState().theme].colors).filter(
       ([key]) => key.startsWith("--text") && key !== "--switch-bg-color"
     ));
@@ -89,6 +93,9 @@ const useLanguageStore = create<LanguageStore>((set, get) => ({
 
     localStorage.setItem('language', lang)
     set({ isAnimating: false });
+
+    await sleep(10);
+    changeTransitionFix(false);
   },
   getNextLanguage: (): Language => {
     return languages[languages.indexOf(get().language) + 1 === languages.length ? 0 : languages.indexOf(get().language) + 1];

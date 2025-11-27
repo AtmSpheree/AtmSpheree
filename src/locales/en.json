@@ -1,8 +1,508 @@
 {
-  "main": {
-
+  "locale": "en",
+  "tags": {
+    "personal": "Personal"
   },
   "home": {
-    "greetings": "Hello!"
-  }
+    "header": {
+      "logotypeText": "my github",
+      "homeText": "Home",
+      "projectsText": "Projects",
+      "contactsText": "Contact me",
+      "mobileMenuText": "Navigation"
+    },
+    "mainCard": {
+      "greetings": "About me",
+      "lastname": "Kondrashov",
+      "firstname": "Grigory",
+      "description": "I am a developer who creates websites and other computer systems.",
+      "addition": "Available for freelance and remote collaboration.",
+      "skills": [
+        "React",
+        "Laravel",
+        "Tilda",
+        "QT",
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "PHP",
+        "FastAPI",
+        "Nginx / Apache",
+        "Vite",
+        "SQL",
+        "Figma"
+      ],
+      "toProjectsButton": "Projects",
+      "contactMeButton": "Get in touch"
+    },
+    "skillsCard": {
+      "subtitle": "Skills",
+      "title": "Creating modern interfaces, thought out to the smallest detail.",
+      "cards": [
+        {
+          "title": "Web applications",
+          "description": ["User-friendly and simple design, domain connection, hosting, database, interaction with external services.", "Available on any device."],
+          "skills": [
+            "React",
+            "Laravel",
+            "FastAPI",
+            "Tilda"
+          ]
+        },
+        {
+          "title": "Desktop applications",
+          "description": ["Centralized management, automation of frequent work processes.", "Individually tailored for specific tasks."],
+          "skills": [
+            "Python",
+            "QT",
+            "SQL"
+          ]
+        },
+        {
+          "title": "Support",
+          "description": ["Implementation of new functionality, updating of existing ones, testing and optimization of ready-made systems."],
+          "skills": [
+            "Figma"
+          ]
+        }
+      ]
+    },
+    "projectsCard": {
+      "subtitle": "Projects"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Examples of my work from different fields of development.",
+    "filters": {
+      "searchLabel": "Title",
+      "dateLabel": "Year",
+      "sortLabel": "Sort",
+      "sortNewFirst": "New first",
+      "sortOldFirst": "Old first",
+      "tagsLabel": "Tags",
+      "clear": "Clear"
+    },
+    "viewButton": "To project",
+    "emptyState": "No projects match your filters."
+  },
+  "project": {
+    "backToProjects": "To projects",
+    "viewButton": "To project",
+    "summaryTitle": "Summary",
+    "dateTitle": "Date",
+    "stackTitle": "Tags"
+  },
+  "projectsList": [
+    {
+      "id": "minesweeper",
+      "title": "The 'Minesweeper' game",
+      "description": ["It's just the infamous Minesweeper game based on the PyQt library of the Python programming language. It was written as my first mini-project when I was just starting my way into IT."],
+      "images": [
+        "/images/projects/minesweeper-1.png",
+        "/images/projects/minesweeper-2.png"
+      ],
+      "datetime": "2022-11-14",
+      "tags": [
+        "Python",
+        "QT",
+        "SQL",
+        "Desktop"
+      ],
+      "url": "https://github.com/AtmSpheree/minesweeper"
+    },
+    {
+      "id": "lma_trainer",
+      "title": "Simulator for the development of logic, memory and attention 'LMA-trainer'",
+      "description": ["An application containing various exercises in a playful way for the development of cognitive functions. It has not received any practical application. The project was created as part of the XI competition of projects and applied research of schoolchildren and students based on the real tasks of employers 'School of Real Affairs'. My classmate created the interface design, and I implemented it as a desktop application. The project was defended at the final stage of the competition at the Higher School of Economics (Moscow) and won first place in its category."],
+      "images": [
+        "/images/projects/lma-trainer-1.png",
+        "/images/projects/lma-trainer-2.png",
+        "/images/projects/lma-trainer-3.png",
+        "/images/projects/lma-trainer-4.png",
+        "/images/projects/lma-trainer-5.png",
+        "/images/projects/lma-trainer-6.png",
+        "/images/projects/lma-trainer-7.png",
+        "/images/projects/lma-trainer-8.png",
+        "/images/projects/lma-trainer-9.png",
+        "/images/projects/lma-trainer-10.png",
+        "/images/projects/lma-trainer-11.png",
+        "/images/projects/lma-trainer-12.png",
+        "/images/projects/lma-trainer-13-en.png"
+      ],
+      "datetime": "2023-05-14",
+      "tags": [
+        "Personal",
+        "Python",
+        "SQL",
+        "PyGame",
+        "Figma",
+        "Desktop"
+      ],
+      "url": "https://github.com/AtmSpheree/lma-trainer"
+    },
+    {
+      "id": "history_questionnaires",
+      "title": "Web application for passing history tests",
+      "description": ["An application for creating history tests by an administrator; passing tests by students using the code. It was written as a diploma. The server part is implemented using FastAPI and runs on Yandex Cloud (the Russian equivalent of AWS). One of my first big projects written in React. It was written in about a week."],
+      "images": [
+        "/images/projects/history-questionnaries-1.png",
+        "/images/projects/history-questionnaries-2.png",
+        "/images/projects/history-questionnaries-3.png",
+        "/images/projects/history-questionnaries-4.png",
+        "/images/projects/history-questionnaries-5.png",
+        "/images/projects/history-questionnaries-6.png",
+        "/images/projects/history-questionnaries-7.png",
+        "/images/projects/history-questionnaries-8.png"
+      ],
+      "datetime": "2024-06-03",
+      "tags": [
+        "Personal",
+        "Python",
+        "JavaScript",
+        "FastAPI",
+        "React",
+        "Figma",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/history_questionnaires"
+    },
+    {
+      "id": "tsi_qt_project",
+      "title": "The program-glossary of terms for teachers",
+      "description": [
+        "A little background: In my 2nd year of college, I got a special subject - 'Technical means of informatization' (abbreviated as TSI). I made a small deal with the teacher of this discipline: I create a program based on the technical assignment given to me, and he gives me credit and allows me not to appear in his classes.",
+        "The project was originally conceived as a glossary of various technical terms for a specific discipline (TSI): administrator (teacher) I could introduce definitions of terms into it, and then give the program to students (for further study).",
+        "Since the terms of reference were not drawn up in full and due to my 'enthusiasm', the functionality of the program was significantly expanded: the ability was added not only to work with already created disciplines, but also to create your own.",
+        "All disciplines are stored in separate databases, the paths to which can be flexibly configured and edit.",
+        "All data is also stored in a form encrypted using the Fernet algorithm, i.e. an ordinary user cannot access information from databases, change or compromise them in any way.",
+        "The program was created over the course of a year, contains many windows with an adaptive interface, and is one of my most extensive QT projects. Unfortunately, it has not received any practical application."
+      ],
+      "images": [
+        "/images/projects/tsi-qt-project-1.png"
+      ],
+      "datetime": "2024-08-17",
+      "tags": [
+        "Python",
+        "QT",
+        "SQL",
+        "Desktop"
+      ],
+      "url": "https://github.com/AtmSpheree/tsi_qt_project"
+    },
+    {
+      "id": "vk-liveslides-miniapp",
+      "title": "A VKontakte mini-application for creating interactive presentations.",
+      "description": [
+        "A mini-application based on the VKontakte social network (using its API and authorization), in which users can create interactive presentations, and then present their ideas to the audience in real time. The server part is implemented using FastAPI, it runs on Yandex Cloud (the Russian equivalent of AWS).",
+        "The application has a convenient presentation editor, a paid subscription to increase the number of presentations, file storage, and the number of connected users.",
+        "It was created jointly with my college's co-sponsor for the VK Freshcode 2024 grant program and was included in 24 of the 240 best projects in the 'B2B community services' category."
+      ],
+      "images": [
+        "/images/projects/vk-liveslides-miniapp-1.jpg",
+        "/images/projects/vk-liveslides-miniapp-2.jpg",
+        "/images/projects/vk-liveslides-miniapp-3.jpg",
+        "/images/projects/vk-liveslides-miniapp-4.jpg",
+        "/images/projects/vk-liveslides-miniapp-5.jpg",
+        "/images/projects/vk-liveslides-miniapp-6.jpg",
+        "/images/projects/vk-liveslides-miniapp-7-en.png",
+        "/images/projects/vk-liveslides-miniapp-8.jpg"
+      ],
+      "datetime": "2024-12-09",
+      "tags": [
+        "Personal",
+        "Python",
+        "FastAPI",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Figma",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/vk-liveslides-miniapp"
+    },
+    {
+      "id": "status_requests",
+      "title": "A web application for processing equipment repair requests",
+      "description": [
+        "An application in which users can register, send requests for the repair of various equipment; the administrator can view them, change the status. The server part is implemented using FastAPI, it runs on Yandex Cloud (the Russian equivalent of AWS).",
+        "It was written as a course project for my classmate. He created the interface design on Figma, and I implemented it as a web application on React.",
+        "Contains mechanisms for confirming registration and resetting passwords using mail (using encrypted link generation using Fernet).",
+        "The project was written in just a month and turned out to be very high-quality in terms of design, functionality, source code structure, as well as the use of various advanced technologies (custom hooks, reuse of components, etc.)."
+      ],
+      "images": [
+        "/images/projects/status-requests-1.png",
+        "/images/projects/status-requests-2.png",
+        "/images/projects/status-requests-3.png",
+        "/images/projects/status-requests-4.png",
+        "/images/projects/status-requests-5.png",
+        "/images/projects/status-requests-6.png",
+        "/images/projects/status-requests-7.png",
+        "/images/projects/status-requests-8.png",
+        "/images/projects/status-requests-9.png",
+        "/images/projects/status-requests-10.png",
+        "/images/projects/status-requests-11.png",
+        "/images/projects/status-requests-12.png",
+        "/images/projects/status-requests-13.png",
+        "/images/projects/status-requests-14.png",
+        "/images/projects/status-requests-15.png",
+        "/images/projects/status-requests-16.png",
+        "/images/projects/status-requests-17.png",
+        "/images/projects/status-requests-18.png"
+      ],
+      "datetime": "2025-01-15",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Figma",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/status_requests"
+    },
+    {
+      "id": "championship-2025",
+      "title": "The championship 'Professionals 2025', 'Web technologies'",
+      "description": [
+        "In 2025, I took 1st place at the regional stage of the Professionals championship in the competence of Web Technologies, after which I performed at the All-Russian stage from the Moscow region.",
+        "The week during which the championship was held became very stressful for me, also considering that I had never before I have never participated in competitive events of this scale.",
+        "Having applied all my accumulated knowledge over several years, out of 59 participants from all over the country, I was able to enter the top ten, taking 10th place in it."
+      ],
+      "images": [
+        "/images/projects/championship-2025-1.jpg",
+        "/images/projects/championship-2025-2.png"
+      ],
+      "datetime": "2025-04-15",
+      "tags": [
+        "Personal",
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Web"
+      ]
+    },
+    {
+      "id": "motorcycles-catalog.local",
+      "title": "The 'Online Motorcycle Catalog' web application",
+      "description": [
+        "An application created as a diploma. The client part is written in React, the server part is written in Laravel (PHP). The interface is implemented using the bootstrap css library.",
+        "There is nothing particularly outstanding in this project. One of the 6 graduation projects written for the purpose of earning money."
+      ],
+      "images": [
+        "/images/projects/motorcycles-catalog-local-1.png",
+        "/images/projects/motorcycles-catalog-local-2.png",
+        "/images/projects/motorcycles-catalog-local-3.png",
+        "/images/projects/motorcycles-catalog-local-4.png",
+        "/images/projects/motorcycles-catalog-local-5.png",
+        "/images/projects/motorcycles-catalog-local-6.png",
+        "/images/projects/motorcycles-catalog-local-7.png",
+        "/images/projects/motorcycles-catalog-local-8.png",
+        "/images/projects/motorcycles-catalog-local-9.png",
+        "/images/projects/motorcycles-catalog-local-10.png",
+        "/images/projects/motorcycles-catalog-local-11.png"
+      ],
+      "datetime": "2025-04-28",
+      "tags": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Nginx / Apache",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/motorcycles-catalog.local"
+    },
+    {
+      "id": "gas-equipment-requests.local",
+      "title": "Web application 'Gas Equipment Repair Requests'",
+      "description": [
+        "An application created as a diploma. The client part is written in React, the server part is written in Laravel (PHP). The interface is implemented using the bootstrap css library.",
+        "There is nothing particularly outstanding in this project. One of the 6 graduation projects written for the purpose of earning money."
+      ],
+      "images": [
+        "/images/projects/gas-equipment-requests-local-1.png",
+        "/images/projects/gas-equipment-requests-local-2.png",
+        "/images/projects/gas-equipment-requests-local-3.png",
+        "/images/projects/gas-equipment-requests-local-4.png",
+        "/images/projects/gas-equipment-requests-local-5.png",
+        "/images/projects/gas-equipment-requests-local-6.png",
+        "/images/projects/gas-equipment-requests-local-7.png",
+        "/images/projects/gas-equipment-requests-local-8.png",
+        "/images/projects/gas-equipment-requests-local-9.png",
+        "/images/projects/gas-equipment-requests-local-10.png",
+        "/images/projects/gas-equipment-requests-local-11.png"
+      ],
+      "datetime": "2025-05-12",
+      "tags": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Nginx / Apache",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/gas-equipment-requests.local"
+    },
+    {
+      "id": "project-management.local",
+      "title": "The web application 'Project Management System'",
+      "description": [
+        "An application created as a diploma. The client part is written in React, the server part is written in Laravel (PHP). The interface is implemented using the bootstrap css library.",
+        "There is nothing particularly outstanding in this project. One of the 6 graduation projects written for the purpose of earning money."
+      ],
+      "images": [
+        "/images/projects/project-management-local-1.png",
+        "/images/projects/project-management-local-2.png",
+        "/images/projects/project-management-local-3.png",
+        "/images/projects/project-management-local-4.png",
+        "/images/projects/project-management-local-5.png",
+        "/images/projects/project-management-local-6.png",
+        "/images/projects/project-management-local-7.png",
+        "/images/projects/project-management-local-8.png",
+        "/images/projects/project-management-local-9.png",
+        "/images/projects/project-management-local-10.png",
+        "/images/projects/project-management-local-11.png"
+      ],
+      "datetime": "2025-05-17",
+      "tags": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Nginx / Apache",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/project-management.local"
+    },
+    {
+      "id": "time-management.local",
+      "title": "The web application 'Employee Time Management System'",
+      "description": [
+        "An application created as a diploma. The client part is written in React, the server part is written in Laravel (PHP). The interface is implemented using the bootstrap css library.",
+        "There is nothing particularly outstanding in this project. One of the 6 graduation projects written for the purpose of earning money."
+      ],
+      "images": [
+        "/images/projects/time-management-local-1.png",
+        "/images/projects/time-management-local-2.png",
+        "/images/projects/time-management-local-3.png",
+        "/images/projects/time-management-local-4.png",
+        "/images/projects/time-management-local-5.png",
+        "/images/projects/time-management-local-6.png",
+        "/images/projects/time-management-local-7.png",
+        "/images/projects/time-management-local-8.png"
+      ],
+      "datetime": "2025-05-26",
+      "tags": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Nginx / Apache",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/time-management.local"
+    },
+    {
+      "id": "sales-management.local",
+      "title": "Web application 'Sales Management System'",
+      "description": [
+        "An application created as a diploma. The client part is written in React, the server part is written in Laravel (PHP). The interface is implemented using the bootstrap css library.",
+        "There is nothing particularly outstanding in this project. One of the 6 graduation projects written for the purpose of earning money."
+      ],
+      "images": [
+        "/images/projects/sales-management-local-1.png",
+        "/images/projects/sales-management-local-2.png",
+        "/images/projects/sales-management-local-3.png",
+        "/images/projects/sales-management-local-4.png",
+        "/images/projects/sales-management-local-5.png",
+        "/images/projects/sales-management-local-6.png",
+        "/images/projects/sales-management-local-7.png",
+        "/images/projects/sales-management-local-8.png",
+        "/images/projects/sales-management-local-9.png",
+        "/images/projects/sales-management-local-10.png"
+      ],
+      "datetime": "2025-06-01",
+      "tags": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Nginx / Apache",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/sales-management.local"
+    },
+    {
+      "id": "product-management.local",
+      "title": "Web application 'Product Management System'",
+      "description": [
+        "An application created as a diploma. The client part is written in React, the server part is written in Laravel (PHP). The interface is implemented using the bootstrap css library.",
+        "There is nothing particularly outstanding in this project. One of the 6 graduation projects written for the purpose of earning money."
+      ],
+      "images": [
+        "/images/projects/product-management-local-1.png",
+        "/images/projects/product-management-local-2.png",
+        "/images/projects/product-management-local-3.png",
+        "/images/projects/product-management-local-4.png",
+        "/images/projects/product-management-local-5.png",
+        "/images/projects/product-management-local-6.png",
+        "/images/projects/product-management-local-7.png",
+        "/images/projects/product-management-local-8.png"
+      ],
+      "datetime": "2025-06-05",
+      "tags": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Nginx / Apache",
+        "Web"
+      ],
+      "url": "https://github.com/AtmSpheree/product-management.local"
+    },
+    {
+      "id": "master-elements",
+      "title": "Design of the VKontakte mini-application",
+      "description": [
+        "Having won the VK Freshcode 2024 grant program from VKontakte, I decided to try to participate in it in 2025. The idea of a game application was formed, a design was created, and a prototype was created on Figma.",
+        "Unfortunately, the project was not included in the list of winners in the first stage of the presentation of application ideas, so it was decided not to implement it in the future."
+      ],
+      "images": [
+        "/images/projects/master-elements-1.png"
+      ],
+      "datetime": "2025-07-31",
+      "tags": [
+        "Figma",
+        "Web"
+      ],
+      "url": "https://www.figma.com/proto/JqEOImCiX25fKq6NGcRRb8/master_elements?page-id=0%3A1&node-id=76-101&p=f&viewport=175%2C144%2C0.17&t=eKnDeJH8wL9Ginev-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A4&show-proto-sidebar=1"
+    },
+    {
+      "id": "dm-monuments",
+      "title": "Website for the business of creating and etching monuments",
+      "description": [
+        "My first big project on Tilda. Images processed using neural networks, external js scripts, a form for sending applications, and an external service for displaying reviews were used. The website supports two languages - English and French."
+      ],
+      "images": [
+        "/images/projects/dm-monuments-1.png"
+      ],
+      "datetime": "2025-09-21",
+      "tags": [
+        "JavaScript",
+        "Tilda",
+        "Web"
+      ],
+      "url": "https://dm-monuments.ca"
+    }
+  ]
 }
